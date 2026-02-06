@@ -1,0 +1,103 @@
+body {
+  font-family: EXO, sans-serif;
+}
+
+.my-navbar .container {
+  max-width: 80% !important;
+  padding-inline: 10px;
+}
+
+/*==============================================================*/
+/*===================== Navbar Style ===========================*/
+/*==============================================================*/
+
+.my-navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: oklch(0.279 0.041 260.031);
+}
+
+.my-navbar .nav-item .nav-link {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: oklch(37.2% 0.044 257.287);
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+  .my-navbar .nav-item:hover,
+  .my-navbar .nav-item:focus {
+    background-color: #f5f3ff;
+    border-radius: 8px;
+  }
+  .my-navbar .nav-item .nav-link {
+    width: 100%;
+    padding: 12px 20px !important;
+    display: block;
+  }
+  .my-navbar .navbar-nav {
+    width: 100%;
+    margin: 0;
+    gap: 5px !important;
+  }
+  .navbar-collapse {
+    background-color: white;
+    padding: 20px 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .my-navbar .nav-item .nav-link:hover::before,
+  .my-navbar .nav-item .nav-link:focus::before {
+    width: 100%;
+  }
+}
+
+.my-navbar .nav-item .nav-link::before {
+  content: "";
+  width: 0;
+  height: 2.5px;
+  background-color: oklch(54.1% 0.281 293.009);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.my-navbar .nav-item .nav-link:hover,
+.my-navbar .nav-item .nav-link:focus {
+  color: oklch(54.1% 0.281 293.009);
+}
+.my-navbar .nav-item .nav-link:focus {
+  font-weight: 600;
+}
+
+.my-navbar .navbar-toggler {
+  border: none;
+  font-size: 1.2rem;
+  color: oklch(37.2% 0.044 257.287);
+}
+.my-navbar .navbar-toggler i {
+  color: oklch(37.2% 0.044 257.287) !important;
+}
+
+.my-navbar .navbar-toggler:focus,
+.my-navbar .navbar-toggler:active {
+  text-decoration: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:not(.collapsed) .toggle-icon::before {
+  content: "\f00d";
+}
+
+.navbar-toggler.collapsed .toggle-icon::before {
+  content: "\f0c9";
+
+}
+  .toggle-icon {
+    display: inline-block;
+  }
